@@ -1,0 +1,21 @@
+.dato-enter {
+    opacity: 0.01;
+    height: 0px;
+}
+
+.dato-enter.dato-enter-active {
+    opacity: 1;
+    height: 100%;
+    transition: 700ms;
+}
+
+.dato-leave {
+    opacity: 1;
+    height: 100%;
+}
+
+.dato-leave.dato-leave-active {
+    opacity: 0.01;
+    height: 0px;
+    transition: 700ms;
+}
