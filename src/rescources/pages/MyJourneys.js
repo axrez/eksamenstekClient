@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { Card } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import LoginFrom from '../comp/LoginForm';
+
 export default class MyJourneys extends Component {
   constructor() {
     super();
@@ -25,11 +27,13 @@ export default class MyJourneys extends Component {
             <p style={{ margin: '3%', fontSize: '0.9rem' }} >Du skal logge ind for at bruge følgende funktionalitet</p> 
             <RaisedButton label="Log Ind" primary={true} style={{ margin: '3%', width: '94%' }} labelStyle={{ color: '#e2b216' }} onClick={this.handleLogin} />
           </Card>
+          <LoginFrom />
         </div> : <div className="main">
             <Card style={{ margin: '-3% 0 3% 0' }} >
               <h3 style={{ width: '100%', font: 'Roberto', fontWeight: 300, margin: '3% 3% 0 3%', paddingTop: '1rem' }} >Mine Rejser</h3>
               <RaisedButton label="Log Ud" primary={true} style={{ margin: '3%', width: '94%' }} labelStyle={{ color: '#e2b216' }} onClick={this.handleLogin} />
             </Card>
+            <LoginFrom />
           </div>}
       </div>
     )

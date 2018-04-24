@@ -1,0 +1,23 @@
+.activeTab {
+    color: rgb(226, 178, 22) !important;
+}
+
+.tab {
+    transition: color;
+    transition-duration: 0.2s;
+}
+
+.container {
+    transition: top;
+    transition-duration: 0.2s;
+}
+
+.fade {
+    opacity: 1 !important;
+}
+
+.background {
+    transition: opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+}

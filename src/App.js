@@ -46,7 +46,7 @@ class Container extends Component {
         />
         <Drawer
           docked={false}
-          width='70%'
+          width='50%'
           open={this.state.open}
           onRequestChange={(open) => this.setState({ open })}
         >
