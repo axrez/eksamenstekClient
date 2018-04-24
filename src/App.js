@@ -15,6 +15,7 @@ import './rescources/pages/App.css';
 import FindJourney from './rescources/pages/FindJourney.js';
 import Timetable from './rescources/pages/Timetable.js';
 import Livemap from './rescources/pages/LiveMap.js';
+import MyJourneys from './rescources/pages/MyJourneys';
 
 const iconStyle = {
   marginBottom: '-0.34rem',
@@ -71,15 +72,18 @@ class Container extends Component {
               <p className="menuItemText" > Kort</p>
             </MenuItem>
           </NavLink>
-          <MenuItem onClick={this.handleClose}>
-            <Account style={iconStyle} />
-            <p className="menuItemText" > Mine Rejser</p>
-          </MenuItem>
+          <NavLink to="/myJourneys" >
+            <MenuItem onClick={this.handleClose}>
+              <Account style={iconStyle} />
+              <p className="menuItemText" > Mine Rejser</p>
+            </MenuItem>
+          </NavLink>
         </Drawer>
         <Switch>
           <Route exact path="/findjourney" component={FindJourney} />
           <Route exact path="/timetable" component={Timetable} />
           <Route exact path="/livemap" component={Livemap} />
+          <Route exact path="/myJourneys" component={MyJourneys} />
           <Redirect to="/findjourney" />
         </Switch>
       </div>

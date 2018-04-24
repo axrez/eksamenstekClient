@@ -35,7 +35,7 @@ export default class SearchJourney extends Component {
       <div>
         <Card style={{ margin: '3%' }} expanded={this.state.expanded} onExpandChange={this.handleOnExpandChange} >
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '-3%' }} >
-            <h3 style={{ width: '100%', font: 'Roberto', fontWeight: 300, marginLeft: '3%' }} >Find Rejse</h3>
+          <h3 style={{ width: '100%', font: 'Roberto', fontWeight: 300, marginLeft: '3%' }} >Find Rejse</h3>
             <div style={{ maxWidth: '50%' }}>
               <Toggle style={{ widht: '10%', margin: '10.5% 0 0 -3%' }} 
                 label="Afgangstidspunkt" 
@@ -55,12 +55,14 @@ export default class SearchJourney extends Component {
             floatingLabelShrinkStyle={{ color: '#e2b216'}} />
           <CardActions className="dato" expandable={true} style={{ opacity: 1, height: '100%' }} >
             <div className="cardExtend" style={{ display: 'flex' }}>
-              <div>
+              <div style={{ width: '100%'}} >
                 <TimePicker
                   format="24hr"
                   hintText="Tid"
                   textFieldStyle={{ margin: '0 3%', widht: '10%' }}
                   defaultTime={new Date()}
+                  style={{ widht: '10%' }}
+                  className="Tid"
                 />
                 <DatePicker
                   style={{ margin: '0 3%' }}
@@ -71,20 +73,21 @@ export default class SearchJourney extends Component {
                     year: 'numeric',
                   }).format}
                   defaultDate={new Date()}
+                  className="Dato"
                 />
               </div>
-              <div style={{ alignSelf: 'center', justifySelf: 'center', marginLeft: '7.5%', marginTop: '5%' }}>
+              <div style={{ alignSelf: 'center', justifySelf: 'center', marginLeft: '7.5%', marginTop: '5%', backgroundColor: '#fff' }}>
                 <RadioButtonGroup defaultSelected="Afgang" style={{ margin: '0 3%' }} name="departureSelectors" >
                   <RadioButton
                     value="Afgang"
                     label="Afgang"
-                    style={{ maxWidth: '2%' }}
-                    labelStyle={{ fontSize: '0.8rem', marginLeft: '-0.6rem' }}
+                    style={{ marginBottom: '10%' }}
+                    labelStyle={{ fontSize: '1rem', marginLeft: '-0.6rem' }}
                   />
                   <RadioButton
                     value="Ankomst"
                     label="Ankomst"
-                    labelStyle={{ fontSize: '0.8rem', marginLeft: '-0.6rem' }}
+                    labelStyle={{ fontSize: '1rem', marginLeft: '-0.6rem' }}
                   />
                 </RadioButtonGroup>
               </div>
